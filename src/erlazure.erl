@@ -825,7 +825,7 @@ get_req_params(Params, ParamSpecs, Type) ->
 
                       ({ParamName, ParamValue}, Acc) ->
                         case orddict:find(ParamName, ParamDefs) of
-                          {ok, Value} -> [{Value#param_spec.name, (Value#param_spec.parse_fun)(ParamValue)} | Acc];
+                          {ok, Value} -> [{Value#param_spec.name, "BlobBlock" } | Acc];
                           error -> Acc
                         end
                   end,
